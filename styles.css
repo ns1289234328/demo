@@ -47,6 +47,36 @@ body{
 }
 #root{ width:100%; height:100%; }
 
+/* ---- fluid full-bleed mode (phones / narrow viewports) ---- */
+#frame.fluid{
+  width:100vw; height:100vh; height:100dvh;
+  border-radius:0; box-shadow:none;
+}
+#frame.fluid .hdr{ height:auto; min-height:58px; padding:10px 16px; gap:10px; }
+#frame.fluid .wordmark{ font-size:18px; }
+#frame.fluid .hdr-sub{ font-size:10px; margin-top:4px; }
+#frame.fluid .kit-pill{ display:none; }
+#frame.fluid .chapters{ padding:8px 12px; gap:4px; }
+#frame.fluid .chip{ font-size:10px; padding:7px 4px; }
+#frame.fluid .stage{ min-height:230px; }
+#frame.fluid .pip{ width:128px; height:128px; top:12px; box-shadow:0 0 0 4px #11293c, 0 0 0 6px rgba(255,255,255,.5), 0 10px 22px rgba(0,0,0,.35); }
+#frame.fluid .pip.left{ left:12px; }
+#frame.fluid .pip.right{ right:12px; }
+#frame.fluid .pip-cap{ font-size:8px; letter-spacing:.12em; top:8px; }
+#frame.fluid .scene-badge{ left:12px; top:12px; font-size:9px; padding:5px 8px; }
+#frame.fluid .gauge-inset{ width:118px !important; height:118px !important; bottom:12px !important; }
+#frame.fluid .gauge-inset svg{ width:92px !important; height:74px !important; }
+#frame.fluid .caption{ min-height:0; padding:14px 16px 10px; }
+#frame.fluid .cap-top{ margin-bottom:8px; }
+#frame.fluid .cap-title{ font-size:21px; margin-bottom:7px; }
+#frame.fluid .cap-body{ font-size:14.5px; line-height:1.45; }
+#frame.fluid .callouts-list{ margin-top:11px; gap:6px; }
+#frame.fluid .tag{ font-size:11.5px; padding:6px 10px; }
+#frame.fluid .controls{ padding:10px 16px 16px; }
+#frame.fluid .scrub{ margin-bottom:11px; }
+#frame.fluid .ctl-row{ gap:10px; }
+#frame.fluid .btn{ height:48px; font-size:14px; border-radius:11px; }
+
 /* ---- generic ---- */
 .col{ display:flex; flex-direction:column; }
 .row{ display:flex; align-items:center; }

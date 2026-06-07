@@ -232,7 +232,7 @@ function wireSwatch(key){
 function GaugeInset({pressure,hold,rep,side}){
   const pos = side==="left" ? {left:18} : {right:18};
   return (
-    <div style={{
+    <div className="gauge-inset" style={{
       position:"absolute", bottom:18, ...pos, width:150, height:150,
       background:"rgba(255,255,255,.96)", border:"1px solid var(--line)",
       borderRadius:16, boxShadow:"var(--shadow)", display:"flex",
@@ -276,14 +276,27 @@ function GaugeFace({pressure}){
   );
 }
 
-/* ---- scaler: fit 820x1180 frame to viewport ---- */
+/* ---- scaler: scaled "card" on desktop, full-bleed fluid layout on phones ----
+   On narrow screens the fixed 820×1180 card would scale down to ~0.45 and
+   float in the middle with big margins. Instead we let the frame fill the
+   viewport at native size so the content is legible without zooming. */
 function fit(){
   const f=document.getElementById("frame");
+  const vw=window.innerWidth, vh=window.innerHeight;
+  // phones / narrow viewports → fill the screen, no scaling
+  if(vw < 760){
+    f.classList.add("fluid");
+    f.style.transform="none";
+    return;
+  }
+  f.classList.remove("fluid");
   const pad=24;
-  const s=Math.min((window.innerWidth-pad)/820,(window.innerHeight-pad)/1180);
+  const s=Math.min((vw-pad)/820,(vh-pad)/1180);
   f.style.transform=`scale(${s})`;
 }
-window.addEventListener("resize",fit); fit();
+window.addEventListener("resize",fit);
+window.addEventListener("orientationchange",fit);
+fit();
 
 ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
 })();
