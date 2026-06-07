@@ -1,0 +1,195 @@
+/* ============ Henry Ford Health — clinical theme ============ */
+:root{
+  --hf-navy:#003359;
+  --hf-blue:#0067b1;
+  --hf-sky:#3fa7dc;
+  --hf-sky-soft:#d9edf8;
+  --hf-green:#5ba300;
+  --ink:#11293c;
+  --ink-soft:#496175;
+  --line:#dfe8ef;
+  --paper:#eef4f9;
+  --card:#ffffff;
+  --shadow: 0 1px 2px rgba(16,40,60,.06), 0 8px 28px rgba(16,40,60,.10);
+  /* instruments */
+  --wire:#1f9d55;
+  --scope:#2b3440;
+  --balloon:#2f7fc4;
+  --font: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; height:100%; }
+body{
+  font-family:var(--font);
+  background:#0c1722;
+  color:var(--ink);
+  -webkit-font-smoothing:antialiased;
+  overflow:hidden;
+  overscroll-behavior:none;
+}
+
+#viewport{
+  position:fixed; inset:0;
+  display:flex; align-items:center; justify-content:center;
+  background:
+    radial-gradient(120% 80% at 50% -10%, #1a2c3c 0%, #0c1722 60%);
+}
+#frame{
+  width:820px; height:1180px;
+  transform-origin:center center;
+  background:var(--paper);
+  position:relative;
+  overflow:hidden;
+  border-radius:30px;
+  box-shadow: 0 40px 120px rgba(0,0,0,.55);
+}
+#root{ width:100%; height:100%; }
+
+/* ---- generic ---- */
+.col{ display:flex; flex-direction:column; }
+.row{ display:flex; align-items:center; }
+button{ font-family:inherit; cursor:pointer; border:none; background:none; }
+
+/* ---- app shell ---- */
+.app{ width:100%; height:100%; display:flex; flex-direction:column; background:var(--paper); }
+
+/* header */
+.hdr{
+  flex:0 0 auto; height:84px; padding:0 26px;
+  display:flex; align-items:center; gap:14px;
+  background:var(--card); border-bottom:1px solid var(--line);
+}
+.wordmark{ font-size:21px; font-weight:800; letter-spacing:-.01em; line-height:1; }
+.wordmark .h1c{ color:var(--hf-navy); }
+.wordmark .fc{ color:var(--ink); }
+.wordmark .h2c{ color:var(--hf-blue); }
+.hdr-sub{ font-size:11.5px; color:var(--ink-soft); font-weight:600; letter-spacing:.04em; text-transform:uppercase; margin-top:5px; }
+.hdr-spacer{ flex:1; }
+.kit-pill{
+  font-size:11px; font-weight:700; letter-spacing:.03em; color:var(--hf-blue);
+  background:var(--hf-sky-soft); border:1px solid #bfe0f1; padding:7px 12px; border-radius:999px;
+}
+
+/* chapter rail */
+.chapters{
+  flex:0 0 auto; display:flex; gap:6px; padding:12px 22px; background:var(--card);
+  border-bottom:1px solid var(--line);
+}
+.chip{
+  flex:1; text-align:center; font-size:11px; font-weight:700; letter-spacing:.02em;
+  color:var(--ink-soft); padding:9px 6px; border-radius:9px; background:#f1f5f9;
+  border:1px solid transparent; transition:.25s; white-space:nowrap;
+}
+.chip.active{ color:#fff; background:var(--hf-blue); box-shadow:0 4px 12px rgba(0,103,177,.3); }
+.chip.done{ color:var(--hf-blue); background:var(--hf-sky-soft); }
+
+/* stage */
+.stage{
+  position:relative; flex:1 1 auto; min-height:0;
+  background:
+    radial-gradient(130% 100% at 70% 18%, #fbf7f4 0%, #f3f0ee 48%, #ece8e6 100%);
+  overflow:hidden;
+}
+.stage-svg{ position:absolute; inset:0; width:100%; height:100%; }
+
+/* PiP scope view */
+.pip{
+  position:absolute; top:18px; width:198px; height:198px;
+  border-radius:50%;
+  box-shadow:0 0 0 6px #11293c, 0 0 0 8px rgba(255,255,255,.5), 0 14px 30px rgba(0,0,0,.35);
+  overflow:hidden; background:#000;
+  transition:left .35s ease, right .35s ease;
+}
+.pip.left{ left:18px; right:auto; }
+.pip.right{ right:18px; left:auto; }
+.pip-tag{
+  position:absolute; top:20px; right:24px; transform:translateY(-130%);
+}
+.pip-label{
+  position:absolute; left:50%; bottom:14px; transform:translateX(-50%);
+  font-family:var(--mono); font-size:10px; letter-spacing:.12em; color:#9fe7c0;
+  text-transform:uppercase; opacity:.9; white-space:nowrap;
+}
+.pip-cap{
+  position:absolute; top:10px; left:50%; transform:translateX(-50%);
+  font-family:var(--mono); font-size:9.5px; letter-spacing:.18em; color:rgba(255,255,255,.65);
+}
+
+/* floating callouts */
+.callout{
+  position:absolute; pointer-events:none;
+  font-size:12.5px; font-weight:600; color:var(--ink);
+  background:rgba(255,255,255,.94); border:1px solid var(--line);
+  padding:6px 10px; border-radius:8px; box-shadow:var(--shadow);
+  white-space:nowrap; transition:opacity .4s, transform .4s;
+}
+.callout .dot{ color:var(--hf-blue); font-weight:800; }
+.callout.warn{ border-color:#f0c98a; background:#fff6e8; }
+.callout.warn .dot{ color:#c77b1e; }
+
+/* caption card */
+.caption{
+  flex:0 0 auto; background:var(--card); border-top:1px solid var(--line);
+  padding:20px 26px 14px; min-height:236px; display:flex; flex-direction:column;
+}
+.cap-top{ display:flex; align-items:center; gap:12px; margin-bottom:11px; }
+.step-num{
+  font-family:var(--mono); font-size:12px; font-weight:600; color:#fff;
+  background:var(--hf-navy); padding:5px 9px; border-radius:7px; letter-spacing:.04em;
+}
+.cap-chapter{ font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--hf-sky); }
+.cap-title{ font-size:25px; font-weight:800; letter-spacing:-.015em; line-height:1.12; color:var(--hf-navy); margin:0 0 9px; }
+.cap-body{ font-size:15.5px; line-height:1.5; color:var(--ink-soft); margin:0; max-width:62ch; }
+.cap-body strong{ color:var(--ink); font-weight:700; }
+.callouts-list{ display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+.tag{
+  display:inline-flex; align-items:center; gap:7px; font-size:12.5px; font-weight:600;
+  color:var(--hf-navy); background:#eef5fb; border:1px solid #d4e6f3; padding:7px 12px; border-radius:8px;
+}
+.tag .ic{ width:7px; height:7px; border-radius:50%; background:var(--hf-blue); }
+.tag.crit{ color:#9a3a12; background:#fdeee2; border-color:#f3cda8; }
+.tag.crit .ic{ background:#d2691e; }
+.tag.mono{ font-family:var(--mono); letter-spacing:.02em; font-weight:600; }
+
+/* controls */
+.controls{
+  flex:0 0 auto; background:var(--card); border-top:1px solid var(--line);
+  padding:14px 26px 20px;
+}
+.scrub{ display:flex; gap:5px; margin-bottom:14px; }
+.seg{ flex:1; height:6px; border-radius:3px; background:#e2ebf2; overflow:hidden; }
+.seg i{ display:block; height:100%; width:0; background:var(--hf-blue); border-radius:3px; transition:width .25s linear; }
+.seg.done i{ width:100%; }
+.seg.active i{ /* width set inline */ }
+.ctl-row{ display:flex; align-items:center; gap:14px; }
+.btn{
+  display:flex; align-items:center; justify-content:center; gap:9px;
+  height:54px; border-radius:13px; font-weight:700; font-size:15px;
+  border:1px solid var(--line); background:#fff; color:var(--hf-navy); transition:.18s;
+}
+.btn:hover{ border-color:#c4d6e3; }
+.btn:active{ transform:translateY(1px); }
+.btn[disabled]{ opacity:.4; cursor:not-allowed; }
+.btn.nav{ flex:1; }
+.btn.play{
+  flex:1.5; background:var(--hf-blue); color:#fff; border-color:var(--hf-blue);
+  box-shadow:0 6px 16px rgba(0,103,177,.28);
+}
+.btn.play:hover{ background:#0073c4; }
+.btn svg{ display:block; }
+
+/* tiny scope-view tag pill on stage */
+.scene-badge{
+  position:absolute; left:18px; top:18px;
+  font-family:var(--mono); font-size:10.5px; font-weight:600; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--ink-soft);
+  background:rgba(255,255,255,.85); border:1px solid var(--line);
+  padding:6px 11px; border-radius:7px; backdrop-filter:blur(3px);
+}
+
+/* fade utility for step transitions — animate only transform so content
+   is ALWAYS visible (opacity never keyframed to 0, safe if clock paused) */
+.fade-key{ opacity:1; animation:capIn .42s ease; }
+@keyframes capIn{ from{ transform:translateY(7px);} to{ transform:none; } }
