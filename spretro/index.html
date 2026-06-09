@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SP Retroperitoneal Access for Ureteral Reconstruction — Surgical Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<!-- mobile top bar -->
+<header class="topbar">
+  <div class="rail-mark">SP</div>
+  <div class="tb-title">Retroperitoneal SP Access<small>Surgical technique guide</small></div>
+  <select id="navSelect" aria-label="Jump to step"></select>
+</header>
+
+<div class="shell">
+
+  <!-- ===================== STEP RAIL ===================== -->
+  <nav class="rail" aria-label="Steps">
+    <div class="rail-brand">
+      <div class="rail-mark">SP</div>
+      <div class="org">Henry Ford Health<small>Urology · Robotic Surgery</small></div>
+    </div>
+    <div>
+      <div class="rail-eyebrow">Technique guide</div>
+      <ol class="steplist" id="steplist"></ol>
+    </div>
+    <div class="rail-foot">
+      Supine retroperitoneal single-port (SP) robotic access via a low anterior incision for ureteral reconstruction.
+    </div>
+  </nav>
+
+  <!-- ===================== MAIN ===================== -->
+  <main class="main">
+  <div class="wrap">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="overview" data-step="Overview">
+      <span class="hero-tag">● Step-by-step surgical guide</span>
+      <h1>Supine retroperitoneal SP access via a low anterior incision</h1>
+      <p class="lede">A reproducible, low-morbidity approach to the ureter for single-port robotic reconstruction. The retroperitoneum is entered directly through a small incision near the anterior superior iliac spine (ASIS), the ureter is localized with a ureteroscope under fluorescence, and the SP system is docked at low insufflation pressure.</p>
+
+      <div class="meta-grid">
+        <div class="cell"><div class="k">Platform</div><div class="v">da Vinci SP</div></div>
+        <div class="cell"><div class="k">Approach</div><div class="v">Retroperitoneal</div></div>
+        <div class="cell"><div class="k">Position</div><div class="v">Supine / low lithotomy</div></div>
+        <div class="cell"><div class="k">Insufflation</div><div class="v">8 mmHg, low flow</div></div>
+      </div>
+
+      <div class="refbar">
+        <div class="ic">▶</div>
+        <div class="txt">
+          <b>Companion video.</b> This guide accompanies the technique demonstrated by
+          Lambertini et&nbsp;al., <i>International Braz J Urol</i> (2024).
+          <a href="https://intbrazjurol.com.br/video-section/20240400_Lambertini_et_al/" target="_blank" rel="noopener">View the journal video&nbsp;↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BEFORE YOU START / EQUIPMENT ===== -->
+    <section class="step" id="prep" data-step="Before you start" data-num="00">
+      <div class="step-head">
+        <div class="step-num">00</div>
+        <div class="h">
+          <div class="step-kicker">Before you start</div>
+          <h2>Equipment &amp; room setup</h2>
+        </div>
+      </div>
+      <div class="step-body">
+        <p>Have everything staged before the patient is positioned. The ureteroscope in particular must be available <strong>at the start of the case</strong> — it identifies the ureter and the level of the stricture, and later serves as the intracorporeal light source for fluorescence localization.</p>
+
+        <div class="sub">Core equipment — tap to check off</div>
+        <div class="checklist" id="equipList"></div>
+
+        <div class="callout pearl">
+          <div class="ic">✦</div>
+          <div class="ct"><b>Pearl</b>Keep the flexible ureteroscope draped in and connected throughout the case. Beyond mapping the stricture, its light tip is what you will chase with the robotic camera in fluorescence mode to find the ureter.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STEP 1 — POSITIONING ===== -->
+    <section class="step" id="s1" data-step="Position the patient" data-num="01">
+      <div class="step-head">
+        <div class="step-num">01</div>
+        <div class="h">
+          <div class="step-kicker">Positioning</div>
+          <h2>Position the patient &amp; create the iliac bump</h2>
+        </div>
+      </div>
+      <div class="step-body">
+        <p>Position depends on whether you will need <strong>urethral access</strong> during the reconstruction.</p>
+        <ul class="detail-list">
+          <li><b>Supine, flat</b> — the default for most mid- and proximal-ureteral work.</li>
+          <li><b>Low lithotomy</b> — choose this when urethral or lower-tract access may be required (e.g. concurrent cystoscopy, distal ureteral reconstruction).</li>
+          <li>Place a <b>small bump under the ipsilateral ASIS</b> — a 1&nbsp;L IV-fluid bag wrapped in a blanket works well — to open the space between the costal margin and the iliac crest and present the lower quadrant.</li>
+          <li><b>Tuck and pad the arms.</b> Confirm all pressure points are protected before prepping.</li>
+        </ul>
+
+        <figure>
+          <div class="fig">
+            <img src="assets/positioning-marking-ill.png" alt="Stylized illustration of the patient draped supine / low lithotomy with the lower abdomen exposed and the incision marked near the ASIS">
+            <div class="cap"><span class="tag">In&nbsp;OR</span>Patient draped in low lithotomy; the lower quadrant is exposed and the ASIS-based incision is marked. The ureteroscope and irrigation lines are already on the field.</div>
+          </div>
+        </figure>
+
+        <div class="callout pearl">
+          <div class="ic">✦</div>
+          <div class="ct"><b>Pearl</b>Confirm your position decision <i>before</i> the prep. Converting from flat to lithotomy after draping is disruptive and breaks sterility planning around the perineum.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STEP 2 — URETEROSCOPY ===== -->
+    <section class="step" id="s2" data-step="Ureteroscopy &amp; catheters" data-num="02">
+      <div class="step-head">
+        <div class="step-num">02</div>
+        <div class="h">
+          <div class="step-kicker">Mapping the target</div>
+          <h2>Ureteroscopy, guidewire &amp; catheter setup</h2>
+        </div>
+      </div>
+      <div class="step-body">
+        <p>Begin endoscopically to define exactly where you are headed before any incision is made.</p>
+        <ul class="detail-list">
+          <li>Perform <b>flexible ureteroscopy</b> and advance a <b>guidewire and the ureteroscope up to the stenosis</b>, confirming the level and length of the diseased segment.</li>
+          <li><b>No intra-ureteral ICG.</b> The ureteroscope's own light — not dye — is used later for fluorescence localization.</li>
+          <li>Place a <b>14 Fr Foley</b> alongside the ureteroscope so both occupy the urethra during mapping.</li>
+          <li>Plan for an <b>18 Fr Foley</b> as the final catheter once the scope is removed.</li>
+        </ul>
+
+        <div class="callout note">
+          <div class="ic">i</div>
+          <div class="ct"><b>Why scope first</b>Localizing the stricture endoscopically lets you site the incision over the correct segment of ureter and keeps the scope in place as a homing beacon for the robotic camera.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STEP 3 — MARK INCISION ===== -->
+    <section class="step" id="s3" data-step="Mark the incision" data-num="03">
+      <div class="step-head">
+        <div class="step-num">03</div>
+        <div class="h">
+          <div class="step-kicker">Surface landmarks</div>
+          <h2>Mark the low anterior incision</h2>
+        </div>
+      </div>
+      <div class="step-body">
+        <p>The incision is built off a single reliable landmark — the <strong>ipsilateral ASIS</strong>.</p>
+        <ul class="detail-list">
+          <li><b>Identify and mark the ipsilateral ASIS.</b></li>
+          <li>Measure <b>two finger-breadths above</b> the ASIS.</li>
+          <li>Mark a <b>3 cm transverse incision</b>, sited slightly <b>medial to the midpoint of the ASIS</b>.</li>
+        </ul>
+        <div class="callout pearl">
+          <div class="ic">✦</div>
+          <div class="ct"><b>Pearl</b>A 3&nbsp;cm transverse incision is enough for the SP access port. Keeping it low and lateral places you directly over the retroperitoneal fat pad and away from the rectus sheath.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STEP 4 — LAYERED DISSECTION ===== -->
+    <section class="step" id="s4" data-step="Layered dissection" data-num="04">
+      <div class="step-head">
+        <div class="step-num">04</div>
+        <div class="h">
+          <div class="step-kicker">Open access</div>
+          <h2>Dissect through the abdominal wall, layer by layer</h2>
+        </div>
+      </div>
+      <div class="step-body">
+        <p>Work down through the lateral abdominal wall one fascial layer at a time. Clear, place stay sutures, and divide each layer in turn. <strong>Step through the layers below</strong> to see each stage.</p>
+
+        <div class="layers">
+          <div class="layer-stack">
+            <div class="lhint">Depth · superficial → deep</div>
+            <button class="layer-btn active" data-img="0"
+              data-title="External oblique fascia"
+              data-desc="Clear the fat off the external oblique aponeurosis, place stay sutures on either side, and incise it.">
+              <span class="depth">1</span>
+              <span><span class="lname">External oblique fascia</span><span class="lsub">Clear · stay sutures · incise</span></span>
+            </button>
+            <button class="layer-btn" data-img="1"
+              data-title="Internal oblique fascia"
+              data-desc="Beneath it lies the internal oblique. Spread its fibers and divide to expose the next layer.">
+              <span class="depth">2</span>
+              <span><span class="lname">Internal oblique fascia</span><span class="lsub">Split · divide</span></span>
+            </button>
+            <button class="layer-btn crux" data-img="2"
+              data-title="Transversus abdominis fascia"
+              data-desc="Often thin and not well developed — but it MUST be divided. This is the layer that stands between you and the retroperitoneum."
+              data-crux="This layer must be divided to enter the retroperitoneum.">
+              <span class="depth">3</span>
+              <span><span class="lname">Transversus abdominis</span><span class="lsub">Thin · must be divided</span></span>
+            </button>
+            <button class="layer-btn" data-img="3"
+              data-title="Transversalis fascia → retroperitoneum"
+              data-desc="Finger-sweep through the transversalis toward the ipsilateral ASIS. Hook the retroperitoneal fat and peritoneum and sweep them medially to develop the space.">
+              <span class="depth">4</span>
+              <span><span class="lname">Finger sweep to retroperitoneum</span><span class="lsub">Sweep peritoneum medially</span></span>
+            </button>
+          </div>
+
+          <div class="layer-view">
+            <div class="layer-figwrap">
+              <span class="layer-badge" id="layerBadge">Layer 1 · External oblique</span>
+              <img src="assets/external-oblique.jpeg" class="show" alt="External oblique fascia exposed between retractors">
+              <img src="assets/internal-oblique.jpeg" alt="Internal oblique fascia with stay sutures">
+              <img src="assets/transversus-abdominis.jpeg" alt="Transversus abdominis fascia being divided">
+              <img src="assets/cartoon-cross-section.png" alt="Cross-sectional cartoon of the finger sweep into the retroperitoneum">
+            </div>
+            <div class="layer-cap">
+              <h4 id="layerTitle">External oblique fascia</h4>
+              <p id="layerDesc">Clear the fat off the external oblique aponeurosis, place stay sutures on either side, and incise it.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout pitfall">
+          <div class="ic">!</div>
+          <div class="ct"><b>Pitfall — the #1 reason access fails</b>If the <b>transversus abdominis fascia is not divided</b>, the retroperitoneum will not be entered. It is frequently thin and easy to mistake for areolar tissue — confirm you have divided it before sweeping.</div>
+        </div>
+
+        <div class="callout pearl">
+          <div class="ic">✦</div>
+          <div class="ct"><b>Tip — peritoneotomy rescue</b>If the peritoneum is inadvertently entered, it can simply be <b>closed with a suture</b> and the operation can proceed as planned. A small peritoneal opening is not a reason to abort the retroperitoneal approach.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STEP 5 — ENTER RETROPERITONEUM ===== -->
+    <section class="step" id="s5" data-step="Enter the retroperitoneum" data-num="05">
+      <div class="step-head">
+        <div class="step-num">05</div>
+        <div class="h">
+          <div class="step-kicker">Develop the space</div>
+          <h2>Enter the retroperitoneum &amp; find the psoas</h2>
+        </div>
+      </div>
+      <div class="step-body">
+        <p>With the transversalis breached, develop the retroperitoneal space and establish your floor.</p>
+        <ul class="detail-list">
+          <li><b>Finger-sweep</b> through the transversalis fascia toward the ipsilateral ASIS; hook the retroperitoneal fat and peritoneum and sweep them <b>medially</b>.</li>
+          <li>Place the <b>small da Vinci SP "beach-ball" access port</b> into the developed space.</li>
+          <li>Insufflate at <b>low flow to 8 mmHg</b> and identify the <b>psoas fascia</b> — this is the floor of the dissection and your orientation anchor.</li>
+        </ul>
+
+        <figure>
+          <div class="fig">
+            <img src="assets/cartoon-cross-section.png" alt="Cross-sectional anatomic cartoon showing the plane of dissection lateral to the rectus, sweeping the peritoneum medially toward the psoas, ureter and iliac vessels">
+            <div class="cap"><span class="tag">Anatomy</span>Axial roadmap: starting lateral to the rectus, the finger develops the extra-peritoneal plane and sweeps the peritoneum and sigmoid medially — the path to the psoas, lateral ureter and iliac vessels.</div>
+          </div>
+        </figure>
+
+        <div class="sub">The psoas plane in practice</div>
+        <div class="fig-row">
+          <figure>
+            <div class="fig">
+              <img src="assets/psoas-low-bmi.jpeg" alt="Psoas plane exposed in a lower-BMI patient">
+              <div class="cap"><span class="tag">Low BMI</span>Clean psoas plane reached quickly with little overlying fat.</div>
+            </div>
+          </figure>
+          <figure>
+            <div class="fig">
+              <img src="assets/psoas-high-bmi.jpeg" alt="Psoas plane exposed in a higher-BMI patient with more retroperitoneal fat">
+              <div class="cap"><span class="tag">Higher BMI</span>More retroperitoneal fat to clear, but the same plane and landmarks apply.</div>
+            </div>
+          </figure>
+        </div>
+
+        <div class="callout note">
+          <div class="ic">i</div>
+          <div class="ct"><b>If a nephrostomy tube is present</b>Connect long yellow extension tubing to it, with a 3-way stopcock and a 50&nbsp;cc Luer-lock syringe on the sterile field, so the collecting system can be flushed or distended on demand.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STEP 6 — SUCTION IRRIGATOR ===== -->
+    <section class="step" id="s6" data-step="Custom suction irrigator" data-num="06">
+      <div class="step-head">
+        <div class="step-num">06</div>
+        <div class="h">
+          <div class="step-kicker">Custom instrument</div>
+          <h2>Build the custom suction-irrigator</h2>
+        </div>
+      </div>
+      <div class="step-body">
+        <p>A single-port field has no dedicated suction-irrigator arm, so one is assembled on the back table. Connect the components <strong>in order, from the drain at the patient end to the Neptune at the suction end.</strong></p>
+
+        <div class="rig">
+          <div class="rig-flow" id="rigFlow"></div>
+          <div class="rig-legend">
+            <span><i style="background:#0f7c83"></i> Fluid path (drain → suction)</span>
+            <span><i style="background:#9a6b1f"></i> Irrigation branch (manual, via syringe)</span>
+          </div>
+        </div>
+
+        <figure>
+          <div class="fig">
+            <img src="assets/suction-irrigator-ill.png" alt="Stylized illustration of the assembled custom suction-irrigator on the field: yellow cysto tubing, stopcock, 50cc syringe and suction tubing">
+            <div class="cap"><span class="tag">Assembled</span>The completed rig on the field — yellow cysto tubing joins the drain to the stopcock; the 50&nbsp;cc Luer-lock syringe drives irrigation while suction tubing runs to the Neptune.</div>
+          </div>
+        </figure>
+
+        <div class="callout pearl">
+          <div class="ic">✦</div>
+          <div class="ct"><b>Pearl</b>Cut the 15&nbsp;Fr round Blake/Jackson-Pratt drain to length and tie <b>2-0 silk holding sutures</b> as handles — they let the bedside assistant retrieve and reposition the tip through the single port without an extra instrument.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STEP 7 — INSUFFLATE & DOCK ===== -->
+    <section class="step" id="s7" data-step="Insufflate &amp; dock" data-num="07">
+      <div class="step-head">
+        <div class="step-num">07</div>
+        <div class="h">
+          <div class="step-kicker">Robot setup</div>
+          <h2>Insufflate &amp; dock the SP robot</h2>
+        </div>
+      </div>
+      <div class="step-body">
+        <ul class="detail-list">
+          <li>Insufflate the retroperitoneum with <b>low flow, AirSeal at 8 mmHg</b> — enough to hold the space without over-distending the confined retroperitoneal cavity.</li>
+          <li><b>Dock the robot</b> to the SP access port and bring in the camera and instruments.</li>
+        </ul>
+
+        <figure>
+          <div class="fig">
+            <img src="assets/final-setup-ill.png" alt="Stylized illustration of the final operative setup with the da Vinci SP robot docked and the endoscopy tower in view">
+            <div class="cap"><span class="tag">Docked</span>Final configuration — the SP arm is docked to the low anterior port; the ureteroscopy tower (right) keeps the scope's view available alongside the robotic console.</div>
+          </div>
+        </figure>
+
+        <div class="callout pitfall">
+          <div class="ic">!</div>
+          <div class="ct"><b>Pitfall</b>Resist the urge to raise pressure. The retroperitoneum is a small, contained space — higher insufflation buys little working room and increases the risk of collapsing the working cavity or losing CO₂ through the open peritoneal sweep.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STEP 8 — IDENTIFY THE URETER ===== -->
+    <section class="step" id="s8" data-step="Identify the ureter" data-num="08">
+      <div class="step-head">
+        <div class="step-num">08</div>
+        <div class="h">
+          <div class="step-kicker">Fluorescence localization</div>
+          <h2>Find the ureter with the ureteroscope light</h2>
+        </div>
+      </div>
+      <div class="step-body">
+        <p>Now the ureteroscope earns its keep. Switch the robotic camera into <strong>fluorescence (Firefly) mode</strong> and look for the glow of the ureteroscope's light shining through the wall of the ureter — no ICG required.</p>
+
+        <div class="firefly">
+          <div class="firefly-head">
+            <div class="ft"><b>Toggle the camera mode.</b> In standard view the anatomy reads by color; in fluorescence the field darkens and the scope's transilluminated light marks the ureter mid-course.</div>
+            <div class="seg" role="tablist" aria-label="Camera mode">
+              <button id="modeStd" class="on" role="tab"><span class="dot"></span>Standard</button>
+              <button id="modeFf" class="ff" role="tab"><span class="dot"></span>Fluorescence</button>
+            </div>
+          </div>
+
+          <div class="scene" id="scene">
+            <img src="assets/initial-robotic-view.png" class="base" alt="Initial left retroperitoneal robotic view">
+            <div class="ffwash"></div>
+            <div class="scope-tip"></div>
+            <span class="modetag" id="modeTag">Standard · 0°</span>
+
+            <div class="pin lead-r" style="left:8%; top:34%;">
+              <span class="knob"></span><span class="lbl">Peritoneum (screen left)</span>
+            </div>
+            <div class="pin lead-l" style="left:78%; top:13%;">
+              <span class="lbl">Renal hilar structures (distance)</span><span class="knob"></span>
+            </div>
+            <div class="pin lead-l ureter" style="left:44%; top:47%;">
+              <span class="lbl">Ureter + ureteroscope</span><span class="knob"></span>
+            </div>
+            <div class="pin lead-l" style="left:62%; top:88%;">
+              <span class="lbl">Psoas (floor)</span><span class="knob"></span>
+            </div>
+          </div>
+
+          <div class="firefly-foot">
+            <span class="schematic">Schematic overlay</span>
+            <span>Annotations show the standard orientation of a left-sided retroperitoneal SP field. In fluorescence, the ureteroscope light marks the ureter mid-course; position shown is illustrative.</span>
+          </div>
+        </div>
+
+        <div class="sub">Orient yourself — left-sided retroperitoneal SP view</div>
+        <div class="orient">
+          <div class="o"><div class="ok">Floor</div><div class="ov">Psoas muscle &amp; fascia along the bottom of the screen</div></div>
+          <div class="o"><div class="ok">Screen left</div><div class="ov">Peritoneal reflection, swept medially</div></div>
+          <div class="o"><div class="ok">Far field</div><div class="ov">Renal hilar structures in the distance</div></div>
+          <div class="o"><div class="ok">Mid-screen</div><div class="ov">Mid-ureter with the ureteroscope inside it</div></div>
+        </div>
+
+        <div class="callout pearl">
+          <div class="ic">✦</div>
+          <div class="ct"><b>Pearl</b>Toggle back and forth between standard and fluorescence as you dissect. The standard view gives you tissue color and depth; the fluorescence view re-confirms the ureter's exact course whenever the planes get ambiguous.</div>
+        </div>
+
+        <!-- ===== CLOSING ===== -->
+        <div class="closing">
+          <div class="cite">
+            <div class="ck">Reference</div>
+            Lambertini L, et&nbsp;al. <i>Supine single-port robotic retroperitoneal approach for ureteral reconstruction.</i>
+            International Brazilian Journal of Urology, 2024.
+            <a href="https://intbrazjurol.com.br/video-section/20240400_Lambertini_et_al/" target="_blank" rel="noopener">intbrazjurol.com.br&nbsp;↗</a>
+          </div>
+          <p class="disclaimer">Prepared as an educational technique guide · Henry Ford Health, Urology. Intra-operative photographs and intracorporeal images are from the operative series described above. This material is intended for trained surgeons and trainees and does not replace institutional protocol or clinical judgment.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+  </main>
+</div>
+
+<script src="guide.js"></script>
+</body>
+</html>
