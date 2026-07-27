@@ -236,6 +236,13 @@
 
     const currentAction = (isMine(step) && step.interaction.type === "hold") ? step.interaction.action : null;
 
+    const jumpToPad = useCallback(() => {
+      const el = document.querySelector(".device");
+      if (!el) return;
+      const y = el.getBoundingClientRect().top + window.pageYOffset - 70;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }, []);
+
     const renderTweaks = () => h(window.TweaksPanel, null,
       h(window.TweakSection, { label: "Brand" }),
       h(window.TweakColor, {
@@ -296,7 +303,12 @@
               h("path", { d: "M12 8.5v5M12 16.2v.2", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round" })),
             h("div", null,
               h("span", { className: "lbl" }, "Use the touchpad · "),
-              h("span", null, done[it.action] ? "Done — the cart has moved into position." : "Press and hold the highlighted green button on the Patient Cart touchpad →")));
+              h("span", null, done[it.action]
+                ? "Done — the cart has moved into position."
+                : "Press and hold the highlighted green button on the Patient Cart touchpad."),
+              !done[it.action]
+                ? h("button", { className: "jump-pad", onClick: jumpToPad }, "Go to touchpad ↓")
+                : null));
         default:
           return null;
       }
@@ -361,7 +373,7 @@
                       step.interaction.type === "checklist" ? "Confirm each item to continue"
                       : step.interaction.type === "ring" ? "Seat all four tabs to continue"
                       : step.interaction.type === "drives" ? "Seat all four drives to continue"
-                      : step.interaction.type === "hold" ? "Press and hold on the touchpad →" : "")
+                      : step.interaction.type === "hold" ? "Press and hold on the touchpad" : "")
                   : null,
                 h("div", { className: "spacer" }),
                 !isMine(step)
